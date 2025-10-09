@@ -3,30 +3,40 @@
 > **An Open-Source, Scalable, and Modern Dashboard built with React, TypeScript, Shadcn/UI, and TailwindCSS.**
 
 Vonika Dash is a **modern, extensible, and multilingual dashboard template** built for developers who want to create professional admin panels, analytics dashboards, or data-driven applications.  
-It features a clean architecture, modular structure, and reusable UI components — built for speed, clarity, and scalability.
+It features a clean architecture, modular structure, and reusable UI components — built for speed, clarity, and scalability.  
+💬 **Fully supports Persian (Farsi) and English languages out of the box.**
 
 ---
 
-## 🚀 Key Features
+# ⚡️ فونیکا دش (Vonika Dash)
 
-- 🧱 **Modular Architecture** — clean, scalable folder structure  
-- 🎨 **Elegant Design** — built with Shadcn/UI + TailwindCSS  
-- 🌗 **Dark & Light Themes** out of the box  
-- 🌐 **Bilingual Ready (FA / EN)**  
-- 📊 **Recharts Integration** for analytics and visualization  
-- ⚙️ **TypeScript-first** approach for safety and clarity  
-- 🧩 **Reusable UI Components** (Button, Drawer, Sidebar, Tooltip, etc.)  
-- ⚡️ **Vite-based build system** for blazing-fast development  
-- 🔓 100% **Open Source (MIT License)**
+> **یک داشبورد مدرن، متن‌باز و مقیاس‌پذیر ساخته‌شده با React، TypeScript، Shadcn/UI و TailwindCSS**
+
+فونیکا دش یک **الگوی داشبورد مدرن، توسعه‌پذیر و چندزبانه** است که برای توسعه‌دهندگانی طراحی شده که می‌خواهند پنل‌های مدیریتی حرفه‌ای، داشبوردهای تحلیلی یا اپلیکیشن‌های داده‌محور بسازند.  
+این پروژه دارای معماری تمیز، ساختار ماژولار و کامپوننت‌های قابل‌استفاده‌مجدد است — ساخته‌شده برای سرعت، وضوح و مقیاس‌پذیری.  
+💬 **به‌صورت پیش‌فرض از زبان‌های فارسی و انگلیسی پشتیبانی می‌کند.**
 
 ---
 
+## 🚀 Key Features / ویژگی‌های کلیدی
+
+- 🧱 **Modular Architecture / معماری ماژولار** — ساختار پوشه‌ای تمیز و قابل توسعه  
+- 🎨 **Elegant Design / طراحی زیبا** — ساخته‌شده با Shadcn/UI و TailwindCSS  
+- 🌗 **Dark & Light Themes / تم تیره و روشن** به‌صورت آماده  
+- 🌐 **Bilingual Ready (FA / EN) / پشتیبانی از دو زبان فارسی و انگلیسی**  
+- 📊 **Recharts Integration / پشتیبانی از نمودارها و تحلیل داده**  
+- ⚙️ **TypeScript-first / تمرکز بر تایپ‌سیفتی با TypeScript**  
+- 🧩 **Reusable UI Components / کامپوننت‌های رابط کاربری قابل استفاده مجدد**  
+- ⚡️ **Vite-based build system / سیستم ساخت سریع با Vite**  
+- 🔓 **100% Open Source (MIT License) / کاملاً متن‌باز با لایسنس MIT**
 
 ---
 
-## 🧩 Architecture Philosophy
+## 🧩 Architecture Philosophy / فلسفه معماری
 
 Vonika Dash follows a **feature-based modular architecture**, designed for scalability and clarity.
+
+فونیکا دش از یک **معماری ماژولار مبتنی بر ویژگی‌ها (Feature-based)** پیروی می‌کند که برای مقیاس‌پذیری و خوانایی طراحی شده است.
 
 | Layer | Description |
 |-------|--------------|
@@ -39,11 +49,11 @@ Vonika Dash follows a **feature-based modular architecture**, designed for scala
 | **hooks/** | Custom React hooks |
 | **router.tsx** | Centralized app routing configuration |
 
-This modular approach allows developers to scale the project easily, reuse components, and keep logic isolated per feature.
+این ساختار باعث می‌شود توسعه‌دهندگان بتوانند پروژه را به‌آسانی گسترش دهند، منطق هر بخش را جدا نگه دارند و کامپوننت‌ها را مجدداً استفاده کنند.
 
 ---
 
-## ⚙️ Tech Stack
+## ⚙️ Tech Stack / پشته فناوری
 
 | Category | Technology |
 |-----------|-------------|
@@ -57,15 +67,15 @@ This modular approach allows developers to scale the project easily, reuse compo
 
 ---
 
-## 🧪 Getting Started
+## 🧪 Getting Started / شروع کار
 
 ```bash
-# Clone the repository
+# Clone the repository / کلون کردن ریپازیتوری
 git clone https://github.com/your-username/vonika-dash.git
 cd vonika-dash
 
-# Install dependencies
+# Install dependencies / نصب وابستگی‌ها
 npm install
 
-# Run development server
+# Run development server / اجرای سرور توسعه
 npm run dev
