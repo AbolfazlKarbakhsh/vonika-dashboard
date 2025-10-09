@@ -1,4 +1,7 @@
-export default {
+
+const dir = require('tailwindcss-dir')();
+
+module.exports = {
   theme: {
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
@@ -11,13 +14,16 @@ export default {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
-    }
+      },
+    },
   },
   variants: {
     extend: {
       borderColor: ['focus-visible'],
       opacity: ['disabled'],
-    }
-  }
+    },
+  },
+  plugins: [
+    dir
+  ],
 }
