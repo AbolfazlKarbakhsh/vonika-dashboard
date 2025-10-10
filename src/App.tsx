@@ -3,9 +3,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import router from './router'
-import './index.css'
 import { Toaster } from 'react-hot-toast';
 import { setRouter } from '@/core/http-servise';
+import './index.css'
 
 
 const client = new QueryClient({
