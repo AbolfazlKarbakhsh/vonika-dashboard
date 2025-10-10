@@ -22,8 +22,6 @@ It features a clean architecture, modular structure, and reusable UI components 
 
 - 🧱 **Modular Architecture / معماری ماژولار** — ساختار پوشه‌ای تمیز و قابل توسعه  
 - 🎨 **Elegant Design / طراحی زیبا** — ساخته‌شده با Shadcn/UI و TailwindCSS  
-- 🌗 **Dark & Light Themes / تم تیره و روشن** به‌صورت آماده  
-- 🌐 **Bilingual Ready (FA / EN) / پشتیبانی از دو زبان فارسی و انگلیسی**  
 - 📊 **Recharts Integration / پشتیبانی از نمودارها و تحلیل داده**  
 - ⚙️ **TypeScript-first / تمرکز بر تایپ‌سیفتی با TypeScript**  
 - 🧩 **Reusable UI Components / کامپوننت‌های رابط کاربری قابل استفاده مجدد**  
@@ -71,7 +69,7 @@ Vonika Dash follows a **feature-based modular architecture**, designed for scala
 
 ```bash
 # Clone the repository / کلون کردن ریپازیتوری
-git clone https://github.com/your-username/vonika-dash.git
+git clone https://github.com/AbolfazlKarbakhsh/vonika-dash.git
 cd vonika-dash
 
 # Install dependencies / نصب وابستگی‌ها

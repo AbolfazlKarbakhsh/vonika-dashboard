@@ -1,10 +1,19 @@
 @import "tailwindcss";
 /* @import "tw-animate-css"; */
+@layer base {
+  @font-face {
+    font-family: "vazir";
+    font-style: normal;
+    src: url("./assets/fonts/Vazirmatn-Regular.ttf") ;
+  }
+  
+}
+
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-vazirmatn: var(--font-vazirmatn);
+  --font-vazirmatn: vazir;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

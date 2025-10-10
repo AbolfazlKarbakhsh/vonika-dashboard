@@ -1,3 +1,4 @@
+import { getCookie } from "@/lib/cookie";
 import axios, {
 type  AxiosInstance,
 type  AxiosResponse,
@@ -35,7 +36,7 @@ export const httpsInterceptedService: AxiosInstance = axios.create({
 // --- Request Interceptor ---
 httpsInterceptedService.interceptors.request.use(
   async (config: InternalAxiosRequestConfig): Promise<InternalAxiosRequestConfig> => {
-    const token = localStorage.getItem("t_sa!@!##@$df");
+    const token = getCookie<String>("token");
 
     if (token) {
       config.headers = config.headers || {};

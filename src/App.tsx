@@ -8,6 +8,7 @@ import { setRouter } from '@/core/http-servise';
 import './index.css'
 
 
+//  setup react query
 const client = new QueryClient({
   defaultOptions: {
     queries: {
@@ -23,14 +24,18 @@ function App() {
   
   return (
     <>
+        {/* react query provider*/}
       <QueryClientProvider client={client}>
+        {/*  toast config */}
           <Toaster
             position="top-center"
             reverseOrder={true}
             toastOptions={{ duration: 4000, style: { direction: 'rtl', fontSize: '.9rem' } }}
           />
+          {/* routing Project */}
         <RouterProvider router={router} />
-        <ReactQueryDevtools />
+        {/* react query dev tool */}
+        {/* <ReactQueryDevtools /> */}
       </QueryClientProvider>
     </>
   )

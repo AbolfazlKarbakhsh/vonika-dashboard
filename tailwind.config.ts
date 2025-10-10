@@ -1,11 +1,8 @@
 
-const dir = require('tailwindcss-dir')();
-
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      " vazir": "vazir",
     },
     extend: {
       spacing: {
@@ -23,7 +20,4 @@ module.exports = {
       opacity: ['disabled'],
     },
   },
-  plugins: [
-    dir
-  ],
 }

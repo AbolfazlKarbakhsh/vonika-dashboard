@@ -23,6 +23,7 @@ export default defineConfig({
       "@store": resolve(__dirname, "./src/store"),
       "@utils": resolve(__dirname, "./src/utils"),
       "@lib": resolve(__dirname, "./src/lib"),
+      "@types": resolve(__dirname, "./src/types")
     },
   },
   plugins: [react(), tailwindcss()],
