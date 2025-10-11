@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import ProfileInHeader from "./ProfileHeader";
 
-// import UserMenu from "./user-menu";
 
 export default function DashboardHeader() {
   return (
@@ -13,7 +13,7 @@ export default function DashboardHeader() {
           className="mx-2 data-[orientation=vertical]:h-4"
         />
         <h1 className="font-medium text-base">پیشخوان</h1>
-        {/* <UserMenu className="mr-auto" /> */}
+        <ProfileInHeader className="mr-auto" />
       </div>
     </header>
   );

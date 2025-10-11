@@ -1,9 +1,8 @@
-import type { ReactNode } from "react";
 
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 // import PermissionsProvider from "@/providers/permissions";
-import DashboardHeader from "./dashboard-header";
+import DashboardHeader from "./Header/DashboardHeader";
 import DashboardSidebar from "./DashboardSidebar";
 import { Outlet } from "react-router";
 

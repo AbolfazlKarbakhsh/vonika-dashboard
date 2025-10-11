@@ -24,12 +24,17 @@ function FeaturedCTA({ link }: { link?: SidebarLink }) {
   if (!link) return null;
   return (
     <SidebarMenu>
-      <SidebarMenuItem className="flex items-center gap-2">
+      <SidebarMenuItem className="flex items-center gap-2 list-none">
         <SidebarMenuButton
-          className="h-10 min-w-8 bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary/90 hover:text-white" 
+          className="h-10 min-w-8 bg-primary text-primary-foreground hover:bg-primary/90 hover:text-white active:bg-primary/90"
           asChild
         >
-          <Link to={link.href} className="flex items-center gap-2" target={link.targetBlank ? "_blank" : undefined} rel={link.targetBlank ? "noopener" : undefined}>
+          <Link
+            to={link.href}
+            className="flex items-center gap-2"
+            target={link.targetBlank ? "_blank" : undefined}
+            rel={link.targetBlank ? "noopener" : undefined}
+          >
             {link.icon && <link.icon />}
             <span>{link.title}</span>
             {link.badge != null && (
@@ -46,14 +51,16 @@ function FeaturedCTA({ link }: { link?: SidebarLink }) {
 
 function MainNavLinkItem({ link, isActive }: { link: SidebarLink; isActive: (href: string) => boolean }) {
   return (
-    <SidebarMenuItem key={link.id ?? link.title} className="list-none">
-      <SidebarMenuButton isActive={isActive(link.href)} asChild>
-        <Link to={link.href} target={link.targetBlank ? "_blank" : undefined} rel={link.targetBlank ? "noopener" : undefined}>
-          {link.icon && <link.icon />}
-          <span>{link.title}</span>
-        </Link>
-      </SidebarMenuButton>
-    </SidebarMenuItem>
+    <li className="list-none">
+      <SidebarMenuItem>
+        <SidebarMenuButton isActive={isActive(link.href)} asChild>
+          <Link to={link.href} target={link.targetBlank ? "_blank" : undefined} rel={link.targetBlank ? "noopener" : undefined}>
+            {link.icon && <link.icon />}
+            <span>{link.title}</span>
+          </Link>
+        </SidebarMenuButton>
+      </SidebarMenuItem>
+    </li>
   );
 }
 
@@ -72,7 +79,7 @@ function MainNavGroupItem({
 }) {
   return (
     <Collapsible key={group.id ?? group.title} asChild open={!!isFocused} className="group/collapsible">
-      <SidebarMenuItem className="list-none">
+      <li className="list-none">
         <CollapsibleTrigger asChild>
           <SidebarMenuButton tooltip={group.title} onClick={isFocused ? onExitFocus : onFocus}>
             {isFocused ? <IconChevronRight /> : group.icon && <group.icon />}
@@ -85,17 +92,24 @@ function MainNavGroupItem({
             />
           </SidebarMenuButton>
         </CollapsibleTrigger>
-        <CollapsibleContent>
-          <SidebarMenuSub >
+
+        <CollapsibleContent className="overflow-hidden">
+          <SidebarMenuSub
+            className={cn(
+              "transition-opacity duration-300 ease-in opacity-0 scale-95",
+              "group-data-[state=open]/collapsible:opacity-100",
+              "group-data-[state=open]/collapsible:scale-100"
+            )}
+          >
             {group.children.map((sub) => {
               if (sub.type === "separator") {
-                return <li key={sub.id ?? `sub-sep-${Math.random()}`} className="my-1 border-sidebar-border border-t" />;
+                return <li key={sub.id ?? `sub-sep-${Math.random()}`} className="my-1 border-sidebar-border border-t list-none" />;
               }
               if (sub.type === "label") {
                 return <div key={sub.id ?? sub.title} className="px-2 py-1 text-sidebar-foreground/70 text-xs">{sub.title}</div>;
               }
               return (
-                <SidebarMenuSubItem key={sub.id ?? sub.title} >
+                <SidebarMenuSubItem key={sub.id ?? sub.title} className="list-none">
                   <SidebarMenuSubButton asChild isActive={isActive(sub.href)}>
                     <Link to={sub.href} target={sub.targetBlank ? "_blank" : undefined} rel={sub.targetBlank ? "noopener" : undefined}>
                       <span>{sub.title}</span>
@@ -106,7 +120,7 @@ function MainNavGroupItem({
             })}
           </SidebarMenuSub>
         </CollapsibleContent>
-      </SidebarMenuItem>
+      </li>
     </Collapsible>
   );
 }
@@ -121,7 +135,7 @@ function MainNavItemsList({
   onFocusGroup: (key: string) => void;
 }) {
   return (
-    <>
+    <ul className="list-none space-y-1">
       {items.map((item) => {
         if (item.type === "separator") return <SidebarSeparator key={item.id ?? `sep-${Math.random()}`} />;
         if (item.type === "label") return <div key={item.id ?? item.title} className="px-2 py-1 text-sidebar-foreground/70 text-xs">{item.title}</div>;
@@ -131,7 +145,7 @@ function MainNavItemsList({
         const key = group.id ?? group.title;
         return <MainNavGroupItem key={key} group={group} onFocus={() => onFocusGroup(key)} isActive={isActive} />;
       })}
-    </>
+    </ul>
   );
 }
 

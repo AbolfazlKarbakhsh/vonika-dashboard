@@ -12,11 +12,11 @@ import {
 
 import { sidebarGroups } from "@/core/sidebar";
 
-import SecondaryNav from "./secondary-nav";
-import { InboxBadge } from "./components/InboxBadge";
+import SecondaryNav from "./SidebarNav/NavSec";
+import { InboxBadge } from "./SidebarNav/InboxBadge";
+import NavMain from "./SidebarNav/NavMain";
 
 import logo from "@/assets/img/logo.png"
-import NavMain from "./components/NavMain";
 
 export default function DashboardSidebar({
   ...props

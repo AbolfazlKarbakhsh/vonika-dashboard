@@ -6,7 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 // dashboard for Routing
 import Home from "@/pages/Home/Home";
-import DashboardLayout from "./layouts/dashboard/DashboardLayout";
+import DashboardLayout from "./layouts/dashboard/DashboardMainLayout";
 
 
 const router = createBrowserRouter([

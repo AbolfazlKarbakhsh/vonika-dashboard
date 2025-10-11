@@ -15,7 +15,6 @@ type SecondaryNavProps = {
   section: SidebarSection;
 } & ComponentPropsWithoutRef<typeof SidebarGroup>;
 
-// تابع بازگشتی برای رندر آیتم‌ها
 function renderItem(item: SidebarItem) {
   console.log(item)
   switch (item.type) {
