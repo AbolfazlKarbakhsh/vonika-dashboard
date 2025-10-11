@@ -7,6 +7,7 @@ import { createBrowserRouter } from "react-router-dom";
 // dashboard for Routing
 import Home from "@/pages/Home/Home";
 import DashboardLayout from "./layouts/dashboard/DashboardMainLayout";
+import NotFound from "./pages/NotFound";
 
 
 const router = createBrowserRouter([
@@ -36,10 +37,10 @@ const router = createBrowserRouter([
   //     }
   //   ],
   // },
-  // {
-  //   path: "*",
-  //   element: <Page404 />,
-  // },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ]);
 
 export default router;
