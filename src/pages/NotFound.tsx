@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
+import useDocumentTitle from "@/hooks/ui/useDocumentTitle";
 import { Link , useNavigate} from "react-router-dom";
 
 export default function NotFound() {
   const navigate = useNavigate();
+  useDocumentTitle("  صفحه مورد نظر یافت نشد");
 
   return (
     <div className="flex min-h-svh flex-col items-center justify-center p-4 text-center">

@@ -5,8 +5,11 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import DashboardHeader from "./Header/DashboardHeader";
 import DashboardSidebar from "./DashboardSidebar";
 import { Outlet } from "react-router";
+import useLocationView from "@/hooks/ui/useLocationView";
 
 export default function DashboardLayout() {
+  useLocationView();
+
   return (
     <SidebarProvider
       style={

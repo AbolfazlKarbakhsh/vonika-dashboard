@@ -17,11 +17,8 @@ const client = new QueryClient({
     }
   }
 });
-
 function App() {
- 
   setRouter(router);
-  
   return (
     <>
         {/* react query provider*/}

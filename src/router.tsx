@@ -1,13 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
 
+//? --------------------- Layouts --------------------- 
+
 // Layout Auth
+import IdentityLayout from "@/layouts/auth/IdentityLayout";
 
 // Layout Dashboard
-
-// dashboard for Routing
-import Home from "@/pages/Home/Home";
 import DashboardLayout from "./layouts/dashboard/DashboardMainLayout";
-import NotFound from "./pages/NotFound";
+
+//? ---------------------- Pages --------------------- 
+
+// Auth page for Routing
+import LoginMain from "@/features/auth/LoginMain";
+
+// dashboard pages for Routing
+import Home from "@/pages/Home/Home";
+
+// global Routes
+import NotFound from "@/pages/NotFound";
 
 
 const router = createBrowserRouter([
@@ -22,21 +32,16 @@ const router = createBrowserRouter([
       },
     ],
   },
-  // {
-  //   element: <IdentityLayout />,
-  //   children: [
-  //     {
-  //       path: "login",
-  //       element: <LoginMainNumber />,
-  //       errorElement: <LoginMainNumber />,
-  //     },
-  //     {
-  //       path: 'login/otp/:phone',
-  //       element: <LoginMainOtp />,
-  //       errorElement: <LoginMainOtp />,
-  //     }
-  //   ],
-  // },
+  {
+    element: <IdentityLayout />,
+    children: [
+      {
+        path: "login",
+        element: <LoginMain />,
+        errorElement: <LoginMain />,
+      },
+    ],
+  },
   {
     path: "*",
     element: <NotFound />,
