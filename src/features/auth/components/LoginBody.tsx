@@ -12,6 +12,7 @@ type FormValues = {
 
 export default function LoginForm() {
   const [isVisible, setIsVisible] = useState(false);
+
   const {
     register,
     handleSubmit,

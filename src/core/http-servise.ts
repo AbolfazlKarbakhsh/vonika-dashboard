@@ -1,8 +1,8 @@
 import { getCookie } from "@/lib/cookie";
 import axios, {
-type  AxiosInstance,
-type  AxiosResponse,
-type  InternalAxiosRequestConfig,
+  type AxiosInstance,
+  type AxiosResponse,
+  type InternalAxiosRequestConfig,
 } from "axios";
 
 // --- Router Setup ---
@@ -21,12 +21,14 @@ export const navigateTo = (path: string): void => {
 };
 
 // --- Base URLs ---
-const Base_url: string = "";
+// Base_url_login : for login
+// Base_url_login : for Routes after login
+const Base_url_login: string = "";
 const Base_url_Api: string = "";
 
 // --- Axios Instances ---
 export const httpService: AxiosInstance = axios.create({
-  baseURL: Base_url,
+  baseURL: Base_url_login,
 });
 
 export const httpsInterceptedService: AxiosInstance = axios.create({
