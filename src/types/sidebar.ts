@@ -2,7 +2,7 @@ import type { Icon } from "@tabler/icons-react";
 
 // import type { PermissionSchema } from "@/features/auth/types/permissions";
 
-export type SidebarSectionKey = "main" | "secondary";
+export type SidebarSectionKey = "main" ;
 
 export type SidebarSeparator = {
   type: "separator";
@@ -52,7 +52,6 @@ export type SidebarItem =
 
 export type SidebarSection = {
   // Optional prominent action, rendered like the Inbox CTA
-  featured?: SidebarLink;
   items: SidebarItem[];
 };
 

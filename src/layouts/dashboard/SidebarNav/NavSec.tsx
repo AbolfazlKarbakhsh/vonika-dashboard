@@ -9,7 +9,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-import type { SidebarItem, SidebarSection, SidebarLink } from "@/types/sidebar";
+import type { SidebarItem, SidebarSection } from "@/types/sidebar";
 
 type SecondaryNavProps = {
   section: SidebarSection;

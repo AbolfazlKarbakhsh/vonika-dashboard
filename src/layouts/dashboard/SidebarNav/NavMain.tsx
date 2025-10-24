@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/sidebar";
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Badge } from "@/components/ui/badge";
 
 import type { SidebarGroup as SidebarGroupItem, SidebarLink, SidebarSection } from "@/types/sidebar";
 import { cn } from "@/lib/utils";
@@ -37,11 +36,6 @@ function FeaturedCTA({ link }: { link?: SidebarLink }) {
           >
             {link.icon && <link.icon />}
             <span>{link.title}</span>
-            {link.badge != null && (
-              <Badge appearance="light" className="mr-auto size-6 rounded-full font-semibold">
-                {String(link.badge)}
-              </Badge>
-            )}
           </Link>
         </SidebarMenuButton>
       </SidebarMenuItem>
@@ -53,7 +47,9 @@ function MainNavLinkItem({ link, isActive }: { link: SidebarLink; isActive: (hre
   return (
     <li className="list-none">
       <SidebarMenuItem>
-        <SidebarMenuButton isActive={isActive(link.href)} asChild>
+              <SidebarMenuButton
+          className={`h-10 min-w-8 hover:bg-secondary  transition-colors duration-300`}  isActive={isActive(link.href)} asChild >
+   
           <Link to={link.href} target={link.targetBlank ? "_blank" : undefined} rel={link.targetBlank ? "noopener" : undefined}>
             {link.icon && <link.icon />}
             <span>{link.title}</span>
@@ -161,7 +157,6 @@ export default function NavMain({ section }: { section: SidebarSection }) {
   return (
     <SidebarGroup>
       <SidebarGroupContent className="flex flex-col gap-2 overflow-x-hidden">
-        <FeaturedCTA link={section.featured} />
         <div className="w-full space-y-2">
           {focusedGroup ? (
             <MainNavGroupItem

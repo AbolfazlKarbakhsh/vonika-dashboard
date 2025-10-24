@@ -23,7 +23,6 @@ export default function DashboardLayout() {
       <SidebarInset>
         <DashboardHeader />
         <main className="flex flex-1 flex-col p-6">
-          {/* <PermissionsProvider>{children}</PermissionsProvider> */}
           <Outlet />
         </main>
       </SidebarInset>
